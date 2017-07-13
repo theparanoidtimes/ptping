@@ -49,6 +49,13 @@ pingResult.getAttemptLines().forEach(attemptLine ->
 // ...
 ```
 
+Also you can query multiple targets at the same time:
+
+```java
+List<PingResult> pingResults = PingCommandRunner.executePingToTargets("yahoo.com", "hotmail.com");
+// query each file as needed...
+```
+
 ## License
 
 MIT License
