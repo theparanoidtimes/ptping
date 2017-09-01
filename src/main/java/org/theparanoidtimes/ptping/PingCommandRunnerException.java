@@ -1,4 +1,4 @@
-package com.paranoidtimes.ptping;
+package org.theparanoidtimes.ptping;
 
 class PingCommandRunnerException extends RuntimeException {
 

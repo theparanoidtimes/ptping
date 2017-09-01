@@ -1,4 +1,4 @@
-group 'com.paranoidtimes.ptping'
+group 'org.theparanoidtimes.ptping'
 version '1.0-SNAPSHOT'
 
 task wrapper(type: Wrapper) {

@@ -1,7 +1,7 @@
-package com.paranoidtimes.ptping.testrunner;
+package org.theparanoidtimes.ptping.testrunner;
 
-import com.paranoidtimes.ptping.PingCommandRunner;
-import com.paranoidtimes.ptping.PingResult;
+import org.theparanoidtimes.ptping.PingCommandRunner;
+import org.theparanoidtimes.ptping.PingResult;
 
 import java.util.List;
 
