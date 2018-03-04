@@ -56,6 +56,8 @@ List<PingResult> pingResults = PingCommandRunner.executePingToTargets("yahoo.com
 // query each file as needed...
 ```
 
+Check out this (example test)[/src/test/java/org/theparanoidtimes/ptping/testrunner/TestRunner.java] for more.
+
 ## License
 
 MIT License
