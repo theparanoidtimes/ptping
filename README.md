@@ -9,7 +9,7 @@ that is normally presented as a *ping* output.
 
 ## Usage
 
-Java 1.8 is required and it can be run on Windows and Unix systems.
+Java 8 or above is required and it can be run on Windows and Unix systems.
 
 Commands are executed by `PingCommandRunner` class and `PingResult` is the result
 object.
