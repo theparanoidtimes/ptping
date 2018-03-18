@@ -7,9 +7,9 @@ This is not a Java ICMP implementation. Application executes *ping* command and
 wraps the response in an object. This object can later be queried for any data
 that is normally presented as a *ping* output.
 
-Java 1.8 is required and it can be run on Windows and Unix systems.
-
 ## Usage
+
+Java 1.8 is required and it can be run on Windows and Unix systems.
 
 Commands are executed by `PingCommandRunner` class and `PingResult` is the result
 object.
@@ -21,9 +21,16 @@ PingResult pingResult = PingCommandRunner.executePing("google.com");
 
 System.out.println(pingResult.getCompleteOutput());
 
-// Pinging google.com [172.217.18.78] with 32 bytes of
-// Reply from 172.217.18.78: bytes=32 time=19ms TTL=57
-// ...
+// Pinging google.com [172.217.16.110] with 32 bytes of data:
+// Reply from 172.217.16.110: bytes=32 time=14ms TTL=57
+// Reply from 172.217.16.110: bytes=32 time=14ms TTL=57
+// Reply from 172.217.16.110: bytes=32 time=24ms TTL=57
+// Reply from 172.217.16.110: bytes=32 time=11ms TTL=57
+// Reply from 172.217.16.110: bytes=32 time=13ms TTL=57
+// Ping statistics for 172.217.16.110:
+// Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+// Approximate round trip times in milli-seconds:
+// Minimum = 11ms, Maximum = 24ms, Average = 15ms
 ```
 
 The resulted object can be queried for data later:
@@ -36,16 +43,17 @@ System.out.println(pingResult.getPingTarget());
 // google.com
 
 System.out.println(pingResult.getTargetIp());
-// 172.217.18.78
+// 172.217.16.110
 ```
 
 Each ping response line can be queried also:
 
 ```java
 pingResult.getAttemptLines().forEach(attemptLine ->
-                System.out.println(attemptLine.getTTL()));
-// 57
-// 57
+                System.out.println(attemptLine.getTime()));
+// 14.0
+// 14.0
+// 24.0
 // ...
 ```
 
